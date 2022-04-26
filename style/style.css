@@ -88,6 +88,7 @@ main.hard{
 
 main{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -124,4 +125,11 @@ main{
 .active{
   color: white;
   background-color: var(--secondary-color);
+  /*disabilitare il click sulle celle cliccate*/
+  pointer-events: none;
+}
+
+.bomb{
+  color: black;
+  background-color: red;
 }

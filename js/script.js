@@ -115,5 +115,15 @@ function endGame(){
 
   if(foundBomb){
     main.innerHTML += `<h2>Hai Perso! Hai scoperto ${activeCells.length} celle su ${safeCells}</h2>`
+    //mostrare tutte le bombe
+    showBombs();
+  }
+}
+
+function showBombs(){
+  for(let i = 0; i < bombPosition.length; i++){
+    const currentElement = document.querySelector(`div:nth-child(${bombPosition[i]})`);
+    // console.log(currentElement);
+    currentElement.classList.add('bomb');
   }
 }
